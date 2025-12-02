@@ -5,12 +5,12 @@
 
         public LoginPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private async void LoginClicked(object? sender, EventArgs e)
         {
-
+            await Shell.Current.GoToAsync("//MenuPage");
         }
     }
 }

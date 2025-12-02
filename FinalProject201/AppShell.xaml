@@ -22,4 +22,9 @@
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" />
 
+    <ShellContent
+     Title="Checkout"
+     ContentTemplate="{DataTemplate local:CheckoutPage}"
+     Route="CheckoutPage" />
+
 </Shell>

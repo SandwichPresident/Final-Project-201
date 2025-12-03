@@ -10,7 +10,17 @@
 
         private async void LoginClicked(object? sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//MenuPage");
+            if (LoginPass.Text != null && LoginUser.Text != null)
+            {                
+                await Shell.Current.GoToAsync("//MenuPage");
+            } else
+            {
+                //"please type username and password!"
+                await DisplayAlert("Warning", "Please type your username and password to continue!", "OK");
+
+            }
         }
+
+
     }
 }

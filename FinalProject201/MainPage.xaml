@@ -14,18 +14,34 @@
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
             <Label
-                Text="Main Page"
+                Text="Welcome!"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
+                Text="Create a new account below"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                SemanticProperties.Description="Create a new account below" />
 
             <Button
-                x:Name="CounterBtn"
+    x:Name="ToLoginBtn"
+    Text="Log in with existing account" 
+    SemanticProperties.Hint="Counts the number of times you click"
+    Clicked="ToLoginClicked"
+    HorizontalOptions="Fill" />
+
+
+            <Entry x:Name="CreateUser"
+       Placeholder="Username"
+       />
+
+            <Entry x:Name="CreatePass"
+       Placeholder="Password"
+      />
+
+            <Button
+                x:Name="SignUpBtn"
                 Text="Sign Up" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="SignUpClicked"

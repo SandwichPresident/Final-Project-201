@@ -65,11 +65,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="DrinkPage.xaml.cs">
+	    <DependentUpon>DrinkPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="DessertPage.xaml.cs">
+	    <DependentUpon>DessertPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="SideItemsPage.xaml.cs">
+	    <DependentUpon>SideItemsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="MainPage.xaml.cs">
 	    <DependentUpon>MainPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="LoginPage.xaml.cs">
-	    <DependentUpon>LoginPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="CheckoutPage.xaml.cs">
 	    <DependentUpon>CheckoutPage.xaml</DependentUpon>
@@ -80,13 +86,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="DrinkPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="DessertPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SideItemsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="LoginPage.xaml">
+	  <MauiXaml Update="CheckoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="CheckoutPage.xaml">
+	  <MauiXaml Update="MainItemsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MenuPage.xaml">

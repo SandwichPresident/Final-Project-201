@@ -1,25 +1,51 @@
-﻿using System.Threading.Tasks;
-namespace FinalProject201 { 
-    public partial class MainPage : ContentPage { 
+﻿namespace FinalProject201
+{
+    public partial class MainPage : ContentPage
+    {
+        Dictionary<string, string> userLogins = new Dictionary<string, string>();
 
-        int count = 0; 
-        public MainPage() { 
+        public MainPage()
+        {
+            InitializeComponent();
 
-            InitializeComponent(); 
+            StreamReader reader = new StreamReader("login.txt");
+            while (!reader.EndOfStream)
+            {
+                string[] line = reader.ReadLine().Split(", ");
+                userLogins.Add(line[0], line[1]);
+            }
+            reader.Close();
         }
 
-        private async void LoginClicked(object? sender, EventArgs e) {
-            if (Password.Text != null && Username.Text != null)
+        private async void LoginClicked(object? sender, EventArgs e)
+        {
+            if (Username.Text == null || Password.Text == null)
             {
-            await Shell.Current.GoToAsync("//MainItemsPage"); 
+                //"please type username and password!"
+                await DisplayAlert("Login Error", "Please type your username and password to continue!", "OK");
+            }
+            else
+            {
+                string username = Username.Text;
+                string password = Password.Text;
 
-            } else
-            {      
-                //"please create a username and password!"
-                await DisplayAlert("Warning", "Please type a username and password to continue!", "OK");
+                if (!userLogins.ContainsKey(username))
+                {
+                    //adds login info to text file
+                    StreamWriter writer = new StreamWriter("login.txt", true);
+                    writer.WriteLine($"{username}, {password}");
+                    writer.Close();
+                }
+                else if (password != userLogins[username])
+                {
+                    //incorrect password
+                    await DisplayAlert("Login Error", "Incorrect password", "Try Again");
+                }
+                else
+                {
+                    await Shell.Current.GoToAsync("//MenuPage");
+                }
             }
         }
-
-
-    } 
+    }
 }

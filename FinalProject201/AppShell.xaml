@@ -20,14 +20,14 @@
     <TabBar>
         <Tab Title="Main">
             
-            <ShellContent Title="MainItems"
+            <ShellContent Title="Mains"
             ContentTemplate="{DataTemplate local:MainItemsPage}"
              Route="MainItemsPage" />
             
         </Tab>
         <Tab Title="Sides">
 
-            <ShellContent Title="SideItems"
+            <ShellContent Title="Sides"
             ContentTemplate="{DataTemplate local:SideItemsPage}"
             Route="SideItemsPage" />
 

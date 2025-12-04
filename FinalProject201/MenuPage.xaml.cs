@@ -11,5 +11,10 @@
         {
             await Shell.Current.GoToAsync("//CheckoutPage");
         }
+
+        private void Burger_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

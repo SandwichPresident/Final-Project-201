@@ -7,28 +7,45 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
-
             <Label
                 Text="Menu"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Label
-                Text="Select your items"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Select your items" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Entrees" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+                <Label Text="Sides" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+                <Label Text="Drinks" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+                <Label Text="Dessert" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
+            </StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Burger" Grid.Row="0" Grid.Column="0"/>
+
+                <Button Text="Button 2" Grid.Row="0" Grid.Column="1"/>
+                <Button Text="Button 3" Grid.Row="1" Grid.Column="0"/>
+                <Button Text="Button 4" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
 
             <Button
-                x:Name="CheckoutBtn"
-                Text="Checkout" 
-                SemanticProperties.Hint="Counts the number of times you click"
-           Clicked="CheckoutClicked"
+                x:Name="Burger"
+                Text="Burger"
+                ImageSource="hamburger.png.png"
+                SemanticProperties.Hint="Click me to add a hamburger to your order"
+                Clicked="Burger_Clicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>

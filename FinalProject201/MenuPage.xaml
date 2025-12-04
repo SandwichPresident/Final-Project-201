@@ -12,15 +12,9 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Entrees" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
-                <Label Text="Sides" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
-                <Label Text="Drinks" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
-                <Label Text="Dessert" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2"/>
-            </StackLayout>
-
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -33,20 +27,15 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Text="Burger" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Entrees" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Sides" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Drinks" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="Dessert" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2" Grid.Row="0" Grid.Column="3"/>
 
-                <Button Text="Button 2" Grid.Row="0" Grid.Column="1"/>
-                <Button Text="Button 3" Grid.Row="1" Grid.Column="0"/>
-                <Button Text="Button 4" Grid.Row="1" Grid.Column="1"/>
+                <Button Text="Burger" Grid.Row="1" Grid.Column="0" ImageSource="hamburger.png" Clicked="Burger_Clicked"/>
+                <Button Text="Pizza" Grid.Row="2" Grid.Column="0"/>
+                <Button Text="Salad" Grid.Row="3" Grid.Column="0"/>
             </Grid>
-
-            <Button
-                x:Name="Burger"
-                Text="Burger"
-                ImageSource="hamburger.png.png"
-                SemanticProperties.Hint="Click me to add a hamburger to your order"
-                Clicked="Burger_Clicked"
-                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 

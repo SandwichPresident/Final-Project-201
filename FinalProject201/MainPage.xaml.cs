@@ -8,22 +8,18 @@ namespace FinalProject201 {
             InitializeComponent(); 
         }
 
-        private async void SignUpClicked(object? sender, EventArgs e) {
-            if (CreatePass.Text != null && CreateUser.Text != null)
+        private async void LoginClicked(object? sender, EventArgs e) {
+            if (Password.Text != null && Username.Text != null)
             {
-            await Shell.Current.GoToAsync("//LoginPage"); 
+            await Shell.Current.GoToAsync("//MainItemsPage"); 
 
             } else
             {      
                 //"please create a username and password!"
-                await DisplayAlert("Warning", "Please create a username and password to continue!", "OK");
+                await DisplayAlert("Warning", "Please type a username and password to continue!", "OK");
             }
         }
-        private async void ToLoginClicked(object? sender, EventArgs e)
-        {
-             await Shell.Current.GoToAsync("//LoginPage");
-           
-        }
+
 
     } 
 }

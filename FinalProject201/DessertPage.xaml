@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProject201.MenuPage">
+             x:Class="FinalProject201.DessertPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -19,17 +19,11 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="Select your items"
+                Text="dessert items"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Select your items" />
 
-            <Button
-                x:Name="CheckoutBtn"
-                Text="Checkout" 
-                SemanticProperties.Hint="Counts the number of times you click"
-           Clicked="CheckoutClicked"
-                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 

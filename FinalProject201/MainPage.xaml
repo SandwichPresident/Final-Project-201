@@ -19,32 +19,24 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="Create a new account below"
+                Text="Log in or create a new account below"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Create a new account below" />
 
-            <Button
-    x:Name="ToLoginBtn"
-    Text="Log in with existing account" 
-    SemanticProperties.Hint="Counts the number of times you click"
-    Clicked="ToLoginClicked"
-    HorizontalOptions="Fill" />
-
-
-            <Entry x:Name="CreateUser"
+            <Entry x:Name="Username"
        Placeholder="Username"
        />
 
-            <Entry x:Name="CreatePass"
+            <Entry x:Name="Password"
        Placeholder="Password"
       />
 
             <Button
-                x:Name="SignUpBtn"
-                Text="Sign Up" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="SignUpClicked"
+                x:Name="LoginBtn"
+                Text="Sign Up/Log in" 
+                SemanticProperties.Hint="logs you in"
+                Clicked="LoginClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>

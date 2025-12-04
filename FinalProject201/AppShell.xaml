@@ -17,10 +17,38 @@
         ContentTemplate="{DataTemplate local:MenuPage}"
         Route="MenuPage" />
 
-    <ShellContent
-        Title="Login"
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="LoginPage" />
+    <TabBar>
+        <Tab Title="Main">
+            
+            <ShellContent Title="MainItems"
+            ContentTemplate="{DataTemplate local:MainItemsPage}"
+             Route="MainItemsPage" />
+            
+        </Tab>
+        <Tab Title="Sides">
+
+            <ShellContent Title="SideItems"
+            ContentTemplate="{DataTemplate local:SideItemsPage}"
+            Route="SideItemsPage" />
+
+        </Tab>
+        <Tab Title="Desserts">
+
+            <ShellContent Title="Desserts"
+            ContentTemplate="{DataTemplate local:DessertPage}"
+            Route="DessertPage" />
+
+        </Tab>
+        <Tab Title="Drinks">
+
+            <ShellContent Title="Drinks"
+            ContentTemplate="{DataTemplate local:DrinkPage}"
+            Route="DrinkPage" />
+
+        </Tab>
+    </TabBar>
+
+   
 
     <ShellContent
      Title="Checkout"

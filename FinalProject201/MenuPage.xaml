@@ -35,6 +35,19 @@
                 <Button Text="Burger" Grid.Row="1" Grid.Column="0" ImageSource="hamburger.png" Clicked="Burger_Clicked"/>
                 <Button Text="Pizza" Grid.Row="2" Grid.Column="0"/>
                 <Button Text="Salad" Grid.Row="3" Grid.Column="0"/>
+
+                <Button Text="Fries" Grid.Row="1" Grid.Column="1"/>
+                <Button Text="Steamed Veggies" Grid.Row="2" Grid.Column="1"/>
+                <Button Text="Apple Sauce" Grid.Row="3" Grid.Column="1"/>
+                <Button Text="Fruit Cup" Grid.Row="4" Grid.Column="1"/>
+
+                <Button Text="Soda" Grid.Row="1" Grid.Column="2"/>
+                <Button Text="Water" Grid.Row="2" Grid.Column="2"/>
+                <Button Text="Coffee" Grid.Row="3" Grid.Column="2"/>
+                <Button Text="Lemonade" Grid.Row="4" Grid.Column="2"/>
+
+                <Button Text="Ice Cream" Grid.Row="1" Grid.Column="3"/>
+                <Button Text="Cookie" Grid.Row="2" Grid.Column="3"/>
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

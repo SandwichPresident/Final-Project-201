@@ -24,24 +24,34 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Select your items" />
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="10"/>
-                </Grid.ColumnDefinitions>
-                <Button Text="Soda" Grid.Row="1" Grid.Column="1"/>
-                <Button Text="Water" Grid.Row="1" Grid.Column="2"/>
-                <Button Text="Coffee" Grid.Row="2" Grid.Column="1"/>
-                <Button Text="Lemonade" Grid.Row="2" Grid.Column="2"/>
+            <Grid RowDefinitions="50, 
+                  300, 30, 30, 60, 100, 
+                  300, 30, 30, 60, 100"
+      ColumnDefinitions="*,*,
+                  *,*,
+                  *,
+                  *,*,
+                  *,*">
+
+
+                <Image Grid.Row="1"  Grid.Column="2" Grid.ColumnSpan="2"  Source="cocacola.png" />
+                <Stepper x:Name="colaStep" Minimum="0" Maximum="99" Increment="1"  
+                         Grid.Row="2" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" />
+                <Button x:Name="colaBtn" Text="Coca-Cola" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+                <Image Grid.Row="1"  Grid.Column="5" Grid.ColumnSpan="2" Source="water.png" />
+                <Stepper x:Name="waterStep" Minimum="0" Maximum="99" Increment="1" 
+                         Grid.Row="2" Grid.RowSpan="2"  Grid.Column="6" />
+                <Button x:Name="waterBtn" Text="Water" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
+
+                <Image Grid.Row="6"  Grid.Column="1" Source="coffee.png" />
+                <Stepper x:Name="coffeeStep"  Minimum="0" Maximum="99" Increment="1" 
+                         Grid.Row="7" Grid.RowSpan="2"  Grid.Column="1" />
+                <Button x:Name="coffeeBtn" Text="Coffee" Grid.Row="9" Grid.Column="1"/>
+
+                <Image Grid.Row="6"  Grid.Column="2" Source="lemonade.png" />
+                <Stepper x:Name="lemonStep" Minimum="0" Maximum="99" Increment="1" />
+                <Button x:Name="lemonBtn" Text="Lemonade" Grid.Row="9" Grid.Column="2"/>
 
             </Grid>
 

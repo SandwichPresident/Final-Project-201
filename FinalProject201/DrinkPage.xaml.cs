@@ -24,6 +24,10 @@
                 {
                     UpdateBtnTxt(colaBtn, value);
                 }
+                else if (stepper.Equals(lemonStep))
+                {
+                    UpdateBtnTxt(lemonBtn, value);
+                }
             } 
           
         }
@@ -32,6 +36,11 @@
         {
             button.Text = string.Format("Add {0} to cart", val);
 
+        }
+
+        private async void LogoutClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//MainPage");
         }
 
     }

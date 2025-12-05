@@ -9,13 +9,15 @@
             Spacing="25">
 
             <Grid RowDefinitions="50, 
-                  300, 40, 30, 70, 100, 
-                  300, 40, 30, 70, 100"
+                  300, 45, 30, 75, 100, 
+                  300, 45, 30, 75, 100"
                   ColumnDefinitions="*,*,
                   200,100,
                   *,
                   200,100,
                   *,*">
+
+                <ImageButton MinimumHeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="0" Source="logout.png" Clicked="LogoutClicked"/>
 
                 <!--Item 1-->
                 <Image Grid.Row="1"  Grid.Column="2" Grid.ColumnSpan="2"  Source="cocacola.png" />

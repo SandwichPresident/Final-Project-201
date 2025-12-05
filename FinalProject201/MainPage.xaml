@@ -37,7 +37,8 @@
                 Text="Sign Up/Log in" 
                 SemanticProperties.Hint="logs you in"
                 Clicked="LoginClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill"
+                MaximumWidthRequest="300"/>
         </VerticalStackLayout>
     </ScrollView>
 

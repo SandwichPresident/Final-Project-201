@@ -7,48 +7,67 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+            
+            <Grid RowDefinitions="50, 
+      300, 45, 30, 75, 100, 
+      300, 45, 30, 75, 100"
+      ColumnDefinitions="*,*,
+      200,100,
+      *,
+      200,100,
+      *,*">
+                <ImageButton MinimumHeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="0" Source="logout.png" Clicked="LogoutClicked"/>
+               
+                <!--Item 1-->
+                <Image Grid.Row="1"  Grid.Column="2" Grid.ColumnSpan="2"  Source="hamburger.png" />
 
-            <Label
-                Text="Menu"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
-            <Label
-                Text="Entrees"
-                Style="{StaticResource SubHeadline}"
+                <Label Grid.Row="2"  Grid.Column="2"
+            Text="Hamburger"
+            Style="{StaticResource ItemName}"
+            SemanticProperties.HeadingLevel="Level1" />
+                <Label Grid.Row="3"  Grid.Column="2"
+                Text="$X.XX"
+                Style="{StaticResource ItemCost}"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Select your items" />
+                SemanticProperties.Description="Hamburger price"/>
+                <Stepper x:Name="burgerStep" Minimum="0" Maximum="99" Increment="1"  
+             Grid.Row="2" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End" />
+                <Button x:Name="burgerBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="10"/>
-                </Grid.ColumnDefinitions>
 
-                <Image Grid.Row="1"  Grid.Column="1" Source="hamburger.png" />
-                <Button Text="Burger" Grid.Row="2"  Grid.Column="1"/>
-                
-                <Image Grid.Row="1"  Grid.Column="2" Source="pizza.png" />
-                <Button Text="Pizza" Grid.Row="2" Grid.Column="2"/>
 
-                <Image Grid.Row="4"  Grid.Column="1" Source="salad.png" />
-                <Button Text="Salad" Grid.Row="5" Grid.Column="1"  />
+                <!--Item 2-->
+                <Image Grid.Row="1"  Grid.Column="5" Grid.ColumnSpan="2" Source="pizza.png" />
+                <Label Grid.Row="2"  Grid.Column="5"
+                    Text="Pizza"
+                 Style="{StaticResource ItemName}"
+                SemanticProperties.HeadingLevel="Level1" />
+                <Label Grid.Row="3"  Grid.Column="5"
+            Text="$X.XX"
+            Style="{StaticResource ItemCost}"
+            SemanticProperties.HeadingLevel="Level2"
+              SemanticProperties.Description="Pizza price"/>
+                <Stepper x:Name="pizzaStep" Minimum="0" Maximum="99" Increment="1" 
+             Grid.Row="2" Grid.RowSpan="2"  Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
+                <Button x:Name="pizzaBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
+
+
+
+                <!--Item 3-->
+                <Image Grid.Row="6"  Grid.Column="2"  Grid.ColumnSpan="2" Source="salad.png" />
+                <Label Grid.Row="7"  Grid.Column="2"
+    Text="Salad"
+    Style="{StaticResource ItemName}"
+    SemanticProperties.HeadingLevel="Level1" />
+                <Label Grid.Row="8"  Grid.Column="2"
+        Text="$X.XX"
+        Style="{StaticResource ItemCost}"
+        SemanticProperties.HeadingLevel="Level2"
+        SemanticProperties.Description="Salad price"/>
+                <Stepper x:Name="saladStep"  Minimum="0" Maximum="99" Increment="1" 
+             Grid.Row="7" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
+                <Button x:Name="saladBtn" Text="Add 0 to cart" Grid.Row="9" Grid.Column="2"  Grid.ColumnSpan="2"/>
+
 
             </Grid>
 

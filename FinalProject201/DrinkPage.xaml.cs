@@ -10,7 +10,7 @@
         void StepperValChanged(object sender, ValueChangedEventArgs e)
         {
             double value = e.NewValue;
-            //right now only first stepper works </3
+
           if (sender is Stepper stepper)
             {
                 if (stepper.Equals(colaStep))

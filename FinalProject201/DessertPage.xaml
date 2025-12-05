@@ -19,10 +19,32 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="dessert items"
+                Text="Desserts"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Select your items" />
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Ice Cream" Grid.Row="1" Grid.Column="1"/>
+                <Button Text="Cookie" Grid.Row="1" Grid.Column="2"/>
+
+
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>

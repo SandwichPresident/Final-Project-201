@@ -19,10 +19,31 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="drink items"
+                Text="Drinks"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Select your items" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Soda" Grid.Row="1" Grid.Column="1"/>
+                <Button Text="Water" Grid.Row="1" Grid.Column="2"/>
+                <Button Text="Coffee" Grid.Row="2" Grid.Column="1"/>
+                <Button Text="Lemonade" Grid.Row="2" Grid.Column="2"/>
+
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>

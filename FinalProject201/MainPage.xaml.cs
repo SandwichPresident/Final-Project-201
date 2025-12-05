@@ -8,7 +8,7 @@
         {
             InitializeComponent();
 
-            StreamReader reader = new StreamReader("login.txt");
+            StreamReader reader = new StreamReader("../../../../login.txt");
             while (!reader.EndOfStream)
             {
                 string[] line = reader.ReadLine().Split(", ");
@@ -32,9 +32,10 @@
                 if (!userLogins.ContainsKey(username))
                 {
                     //adds login info to text file
-                    StreamWriter writer = new StreamWriter("login.txt", true);
+                    StreamWriter writer = new StreamWriter("../../../../login.txt", true);
                     writer.WriteLine($"{username}, {password}");
                     writer.Close();
+                    await Shell.Current.GoToAsync("//MainItemsPage");
                 }
                 else if (password != userLogins[username])
                 {
@@ -43,7 +44,7 @@
                 }
                 else
                 {
-                    await Shell.Current.GoToAsync("//MenuPage");
+                    await Shell.Current.GoToAsync("//MainItemsPage");
                 }
             }
         }

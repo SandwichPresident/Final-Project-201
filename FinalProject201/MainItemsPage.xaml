@@ -19,10 +19,38 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="main items"
+                Text="Entrees"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Select your items" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="1"  Grid.Column="1" Source="hamburger.png" />
+                <Button Text="Burger" Grid.Row="2"  Grid.Column="1"/>
+                
+                <Image Grid.Row="1"  Grid.Column="2" Source="pizza.png" />
+                <Button Text="Pizza" Grid.Row="2" Grid.Column="2"/>
+
+                <Image Grid.Row="4"  Grid.Column="1" Source="salad.png" />
+                <Button Text="Salad" Grid.Row="5" Grid.Column="1"  />
+
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>

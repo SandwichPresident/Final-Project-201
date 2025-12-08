@@ -9,7 +9,8 @@
 
         private async void CheckoutClicked(object? sender, EventArgs e)
         {
-            await DisplayAlert("Order placed!", "Thank you for choosing Ritchies!", "OK");
+            await DisplayAlert("Order placed!", "Thank you for choosing Ritchies!", "Exit");
+            await Shell.Current.GoToAsync("//MainPage");
 
         }
 

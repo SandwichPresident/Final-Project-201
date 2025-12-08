@@ -38,5 +38,10 @@
             await Shell.Current.GoToAsync("//MainPage");
         }
 
+        private async void CheckoutClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//CheckoutPage");
+        }
+
     }
 }

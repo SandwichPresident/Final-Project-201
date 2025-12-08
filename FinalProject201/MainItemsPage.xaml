@@ -17,7 +17,9 @@
       200,100,
       *,*">
                 <ImageButton MinimumHeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="0" Source="logout.png" Clicked="LogoutClicked"/>
-               
+                <ImageButton MinimumHeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="8" Source="checkout.png" Clicked="CheckoutClicked"/>
+
+
                 <!--Item 1-->
                 <Image Grid.Row="1"  Grid.Column="2" Grid.ColumnSpan="2"  Source="hamburger.png" />
 
@@ -26,7 +28,7 @@
             Style="{StaticResource ItemName}"
             SemanticProperties.HeadingLevel="Level1" />
                 <Label Grid.Row="3"  Grid.Column="2"
-                Text="$X.XX"
+                Text="$7.99"
                 Style="{StaticResource ItemCost}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Hamburger price"/>
@@ -43,7 +45,7 @@
                  Style="{StaticResource ItemName}"
                 SemanticProperties.HeadingLevel="Level1" />
                 <Label Grid.Row="3"  Grid.Column="5"
-            Text="$X.XX"
+            Text="$4.99"
             Style="{StaticResource ItemCost}"
             SemanticProperties.HeadingLevel="Level2"
               SemanticProperties.Description="Pizza price"/>
@@ -60,7 +62,7 @@
     Style="{StaticResource ItemName}"
     SemanticProperties.HeadingLevel="Level1" />
                 <Label Grid.Row="8"  Grid.Column="2"
-        Text="$X.XX"
+        Text="$7.99"
         Style="{StaticResource ItemCost}"
         SemanticProperties.HeadingLevel="Level2"
         SemanticProperties.Description="Salad price"/>

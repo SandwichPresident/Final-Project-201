@@ -7,44 +7,55 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+         
+            <Grid RowDefinitions="50, 
+  300, 45, 30, 75, 100, 
+  100"
+  ColumnDefinitions="*,*,
+  200,100,
+  *,
+  200,100,
+  *,*">
 
-            <Label
-                Text="Menu"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
-            <Label
-                Text="Desserts"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Select your items" />
+                <ImageButton MinimumHeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="0" Source="logout.png" Clicked="LogoutClicked"/>
+                <ImageButton MinimumHeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="8" Source="checkout.png" Clicked="CheckoutClicked"/>
 
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="10"/>
-                </Grid.ColumnDefinitions>
+                <!--Item 1-->
+                <Image Grid.Row="1"  Grid.Column="2" Grid.ColumnSpan="2"  Source="icecream.png" />
 
-                <Button Text="Ice Cream" Grid.Row="1" Grid.Column="1"/>
-                <Button Text="Cookie" Grid.Row="1" Grid.Column="2"/>
+                <Label Grid.Row="2"  Grid.Column="2"
+        Text="Ice Cream"
+        Style="{StaticResource ItemName}"
+        SemanticProperties.HeadingLevel="Level1" />
+                <Label Grid.Row="3"  Grid.Column="2"
+            Text="$3.99"
+            Style="{StaticResource ItemCost}"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Ice Cream price"/>
+                <Stepper x:Name="icecreamStep" Minimum="0" Maximum="99" Increment="1"  
+         Grid.Row="2" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End" />
+                <Button x:Name="icecreamBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
 
+
+
+                <!--Item 2-->
+                <Image Grid.Row="1"  Grid.Column="5" Grid.ColumnSpan="2" Source="cookie.png" />
+                <Label Grid.Row="2"  Grid.Column="5"
+    Text="Cookie"
+    Style="{StaticResource ItemName}"
+    SemanticProperties.HeadingLevel="Level1" />
+                <Label Grid.Row="3"  Grid.Column="5"
+        Text="$2.99"
+        Style="{StaticResource ItemCost}"
+        SemanticProperties.HeadingLevel="Level2"
+          SemanticProperties.Description="Cookie price"/>
+                <Stepper x:Name="cookieStep" Minimum="0" Maximum="99" Increment="1" 
+         Grid.Row="2" Grid.RowSpan="2"  Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
+                <Button x:Name="cookieBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
 
             </Grid>
+      
 
         </VerticalStackLayout>
     </ScrollView>

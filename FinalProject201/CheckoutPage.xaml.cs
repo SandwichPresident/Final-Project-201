@@ -12,5 +12,6 @@
             await DisplayAlert("Order placed!", "Thank you for choosing Ritchies!", "OK");
 
         }
+
     }
 }

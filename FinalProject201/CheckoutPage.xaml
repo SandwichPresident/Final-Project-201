@@ -28,7 +28,7 @@
                 x:Name="OrderBtn"
                 Text="Place Order" 
                 SemanticProperties.Hint="Places your order"
-           
+           Clicked="CheckoutClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>

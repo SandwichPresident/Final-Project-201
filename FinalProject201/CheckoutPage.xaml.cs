@@ -7,6 +7,8 @@
             InitializeComponent();
         }
 
+
+
         private async void CheckoutClicked(object? sender, EventArgs e)
         {
             await DisplayAlert("Order placed!", "Thank you for choosing Ritchies!", "Exit");

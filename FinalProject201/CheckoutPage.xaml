@@ -18,6 +18,24 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
+            <CollectionView x:Name="OrderedItems">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Food Name" /> <!--{Binding FoodItemName}-->
+                            <Label Grid.Column="1" Text="Amount" HorizontalOptions="End" /> <!--{Binding Quantity, StringFormat='x{0}'}-->
+                            <Label Grid.Column="2" Text="Total" HorizontalOptions="End" /><!--{Binding TotalPrice, StringFormat='{0:C}'}-->
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
+
             <Label
                 Text="Your total is $X.XX"
                 Style="{StaticResource SubHeadline}"

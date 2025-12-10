@@ -50,5 +50,10 @@
         {
             await Shell.Current.GoToAsync("//CheckoutPage");
         }
+
+        private void friesBtn_Clicked(object sender, EventArgs e)
+        {
+            OrderServices.addToOrder("fries", friesStep.value);
+        }
     }
 }

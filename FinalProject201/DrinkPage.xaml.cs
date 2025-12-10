@@ -9,7 +9,7 @@
 
         void StepperValChanged(object sender, ValueChangedEventArgs e)
         {
-            double value = e.NewValue;
+          double value = e.NewValue;
 
           if (sender is Stepper stepper)
             {

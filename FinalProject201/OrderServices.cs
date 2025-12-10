@@ -2,9 +2,11 @@
 
 namespace FinalProject201
 {
-    public partial class OrderServices
+    public class OrderServices
     {
         public List<string> order = new List<string>();
+
+        //Add main stepper class here (make it public)
 
         public void addToOrder(string item, double num)
         {

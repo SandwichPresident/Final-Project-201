@@ -2,11 +2,15 @@
 {
     public partial class SideItemsPage : ContentPage
     {
+        public double friesVal = 0;
+        public double vegVal = 0;
+        public double appleVal = 0;
+        public double fruitVal = 0;
+
         public SideItemsPage()
         {
             InitializeComponent();
         }
-
 
         void StepperValChanged(object sender, ValueChangedEventArgs e)
         {
@@ -17,7 +21,7 @@
                 if (stepper.Equals(friesStep))
                 {
                     UpdateBtnTxt(friesBtn, value);
-
+                    friesVal = value;
                 }
                 else if (stepper.Equals(veggieStep))
                 {
@@ -53,7 +57,7 @@
 
         private void friesBtn_Clicked(object sender, EventArgs e)
         {
-            OrderServices.addToOrder("fries", friesStep.value);
+            OrderServices.addToOrder("fries", friesVal);
         }
     }
 }

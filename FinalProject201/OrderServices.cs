@@ -6,7 +6,7 @@ namespace FinalProject201
     {
         public List<string> order = new List<string>();
 
-        public void Add(string item, int num)
+        public void addToOrder(string item, int num)
         {
             while (num > 0)
             {
@@ -15,7 +15,7 @@ namespace FinalProject201
             }
         }
 
-        public void remove(string item, int num)
+        public void removeFromOrder(string item, int num)
         {
             while (num > 0)
             {

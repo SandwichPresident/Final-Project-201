@@ -1,17 +1,28 @@
-﻿namespace FinalProject201
+﻿using System.Collections.ObjectModel;
+
+namespace FinalProject201
 {
     public partial class CheckoutPage : ContentPage
     {
-        private OrderServices currentBasket; 
+        public OrderServices currentBasket;
+        public ObservableCollection<Item> testing;
         public CheckoutPage(OrderServices basket)
         {
             this.currentBasket = basket;
             InitializeComponent();
+            testing = new ObservableCollection<Item>
+            {
+                new Item{Name = "food", Quantity = 2}
+            };
+            BindingContext = testing;
 
             
         }
 
-
+        private void RemoveItem(object? sender, EventArgs e)
+        {
+            currentBasket.RemoveFromOrder("burger", 1);
+        }
 
         private async void CheckoutClicked(object? sender, EventArgs e)
         {
@@ -20,5 +31,11 @@
 
         }
 
+    }
+
+    public class Item
+    {
+        public string Name { get; set; }
+        public int Quantity { get; set; }
     }
 }

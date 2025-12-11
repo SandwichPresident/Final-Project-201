@@ -13,7 +13,7 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <CollectionView x:Name="OrderedItems">
+            <CollectionView x:Name="OrderedItems" ItemsSource="{Binding testing}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="5">
@@ -25,6 +25,8 @@
                             <Label Grid.Column="0" Text="Food Name" /> <!--{Binding FoodItemName}-->
                             <Label Grid.Column="1" Text="Amount" HorizontalOptions="End" /> <!--{Binding Quantity, StringFormat='x{0}'}-->
                             <Label Grid.Column="2" Text="Total" HorizontalOptions="End" /><!--{Binding TotalPrice, StringFormat='{0:C}'}-->
+                            <Button x:Name="decreaseBtn"  Style="{StaticResource AddCartBtn}" Text="Remove from cart" Grid.Column="3" Clicked="RemoveItem"/>
+                            <!--{Binding FoodItemName} or something so the button works -->
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

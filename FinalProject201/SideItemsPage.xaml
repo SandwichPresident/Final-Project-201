@@ -35,7 +35,7 @@
                  SemanticProperties.Description="Fries price"/>
                 <Stepper x:Name="friesStep" Minimum="0" Maximum="99" Increment="1"  
               Grid.Row="2" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End" />
-                <Button x:Name="friesBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <Button x:Name="friesBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Clicked="friesBtn_Clicked"/>
 
 
 

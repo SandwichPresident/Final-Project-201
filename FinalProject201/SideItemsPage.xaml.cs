@@ -57,7 +57,7 @@
 
         private void friesBtn_Clicked(object sender, EventArgs e)
         {
-            OrderServices.addToOrder("fries", friesVal);
+            orderServ.addToOrder("fries", friesVal);
         }
     }
 }

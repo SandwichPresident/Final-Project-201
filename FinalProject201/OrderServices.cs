@@ -6,7 +6,7 @@ namespace FinalProject201
     {
         public List<string> order = new List<string>();
 
-        //Add main stepper class here (make it public)
+        //Add main stepper class here (make it public) if need to
 
         public void addToOrder(string item, double num)
         {

@@ -27,10 +27,12 @@
 
             <Entry x:Name="Username"
        Placeholder="Username"
+                   TextColor="Black"
        />
 
             <Entry x:Name="Password"
        Placeholder="Password" IsPassword="True"
+                   TextColor="Black"
       />
 
             <Button

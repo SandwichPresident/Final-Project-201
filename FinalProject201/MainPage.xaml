@@ -8,10 +8,11 @@
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
+                Source="tiger.png"
+                HeightRequest="100"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+                SemanticProperties.Description="tiger icon"
+                />
 
             <Label
                 Text="Welcome to Ritchie's!"

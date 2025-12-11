@@ -36,7 +36,7 @@
                             SemanticProperties.Description="Coca-cola price"/>
                 <Stepper x:Name="colaStep" Minimum="0" Maximum="99" Increment="1"  
                          Grid.Row="2" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End" />
-                <Button x:Name="colaBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <Button x:Name="colaBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
 
 
 
@@ -53,7 +53,7 @@
                           SemanticProperties.Description="Water price"/>
                 <Stepper x:Name="waterStep" Minimum="0" Maximum="99" Increment="1" 
                          Grid.Row="2" Grid.RowSpan="2"  Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
-                <Button x:Name="waterBtn" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
+                <Button x:Name="waterBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
 
 
 
@@ -70,7 +70,7 @@
                     SemanticProperties.Description="Coffee price"/>
                 <Stepper x:Name="coffeeStep"  Minimum="0" Maximum="99" Increment="1" 
                          Grid.Row="7" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
-                <Button x:Name="coffeeBtn" Text="Add 0 to cart" Grid.Row="9" Grid.Column="2"  Grid.ColumnSpan="2"/>
+                <Button x:Name="coffeeBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="2"  Grid.ColumnSpan="2"/>
 
                 
                 
@@ -87,7 +87,7 @@
                           SemanticProperties.Description="Lemonade price"/>
                 <Stepper x:Name="lemonStep" Minimum="0" Maximum="99" Increment="1" 
                          Grid.Row="7" Grid.RowSpan="2" Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End" />
-                <Button x:Name="lemonBtn" Text="Add 0 to cart" Grid.Row="9" Grid.Column="5"  Grid.ColumnSpan="2"/>
+                <Button x:Name="lemonBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="5"  Grid.ColumnSpan="2"/>
 
             </Grid>
 

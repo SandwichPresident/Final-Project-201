@@ -2,9 +2,13 @@
 {
     public partial class CheckoutPage : ContentPage
     {
-        public CheckoutPage()
+        private OrderServices currentBasket; 
+        public CheckoutPage(OrderServices basket)
         {
+            this.currentBasket = basket;
             InitializeComponent();
+
+            
         }
 
 

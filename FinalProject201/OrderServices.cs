@@ -4,11 +4,11 @@ namespace FinalProject201
 {
     public class OrderServices
     {
-        public List<string> order = new List<string>();
+        private List<string> order = new List<string>();
 
         //Add main stepper class here (make it public) if need to
 
-        public void addToOrder(string item, double num)
+        public void AddToOrder(string item, double num)
         {
             while (num > 0)
             {
@@ -17,13 +17,18 @@ namespace FinalProject201
             }
         }
 
-        public void removeFromOrder(string item, double num)
+        public void RemoveFromOrder(string item, double num)
         {
             while (num > 0)
             {
                 order.Remove(item);
                 num--;
             }
+        }
+
+        public List<string> GetCurrentOrder()
+        {
+            return order;
         }
     }
 }

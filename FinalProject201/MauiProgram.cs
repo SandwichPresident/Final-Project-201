@@ -17,6 +17,7 @@ namespace FinalProject201
                     fonts.AddFont("Geom-Regular.ttf", "GeomRegular");
                 });
 
+            builder.Services.AddSingleton<OrderServices>();
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

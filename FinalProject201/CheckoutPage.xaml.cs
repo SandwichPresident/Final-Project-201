@@ -4,26 +4,23 @@ namespace FinalProject201
 {
     public partial class CheckoutPage : ContentPage
     {
-        public OrderServices currentBasket;
-        public ObservableCollection<Item> testing;
-        public CheckoutPage(OrderServices basket)
+    
+        public CheckoutPage()
         {
-            this.currentBasket = basket;
             InitializeComponent();
-            testing = new ObservableCollection<Item>
-            {
-                new Item{Name = "food", Quantity = 2}
-            };
-            BindingContext = testing;
 
-            
+            orderedItems.ItemsSource = getItems();
+
         }
 
-        private void RemoveItem(object? sender, EventArgs e)
+        private List<Item> getItems()
         {
-            currentBasket.RemoveFromOrder("burger", 1);
+            return new List<Item>
+            {
+                new Item{ Name = "please work", Quantity = 2},
+                new Item{ Name = "i swear", Quantity=2}
+            };
         }
-
         private async void CheckoutClicked(object? sender, EventArgs e)
         {
             await DisplayAlert("Order placed!", "Thank you for choosing Ritchies!", "Exit");
@@ -31,11 +28,5 @@ namespace FinalProject201
 
         }
 
-    }
-
-    public class Item
-    {
-        public string Name { get; set; }
-        public int Quantity { get; set; }
     }
 }

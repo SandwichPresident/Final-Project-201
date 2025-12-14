@@ -52,7 +52,7 @@
                SemanticProperties.Description="Veggie price"/>
                 <Stepper x:Name="veggieStep" Minimum="0" Maximum="99" Increment="1" 
               Grid.Row="2" Grid.RowSpan="2"  Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
-                <Button x:Name="veggieBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
+                <Button x:Name="veggieBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" Clicked="veggieBtn_Clicked"/>
 
 
 
@@ -69,7 +69,7 @@
          SemanticProperties.Description="Apple sauce price"/>
                 <Stepper x:Name="appleStep"  Minimum="0" Maximum="99" Increment="1" 
               Grid.Row="7" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
-                <Button x:Name="appleBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="2"  Grid.ColumnSpan="2"/>
+                <Button x:Name="appleBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="2"  Grid.ColumnSpan="2" Clicked="appleBtn_Clicked"/>
 
 
 
@@ -86,7 +86,7 @@
                SemanticProperties.Description="Fruit cup price"/>
                 <Stepper x:Name="fruitStep" Minimum="0" Maximum="99" Increment="1" 
               Grid.Row="7" Grid.RowSpan="2" Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End" />
-                <Button x:Name="fruitBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="5"  Grid.ColumnSpan="2"/>
+                <Button x:Name="fruitBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="5"  Grid.ColumnSpan="2" Clicked="fruitBtn_Clicked"/>
 
 
             </Grid>

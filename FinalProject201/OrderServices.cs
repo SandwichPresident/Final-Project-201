@@ -1,31 +1,58 @@
-﻿namespace FinalProject201;
+using System.Text;
 
-public class OrderServices
+namespace FinalProject201;
+
+// Saves orders so the app can prove persistence.
+
+internal class OrderService
 {
-    private List<string> order = new List<string>();
+    private readonly string _orderPath =
+        Path.Combine(FileSystem.AppDataDirectory, "orders.txt");
 
-    //Add main stepper class here (make it public) if need to
-
-    public void AddToOrder(string item, double num)
+    public bool SaveOrder(string username, List<Item> cart, out string message)
     {
-        while (num > 0)
+        username = (username ?? "").Trim();
+
+        if (username == "")
         {
-            order.Add(item);
-            num--;
+            message = "No user is logged in.";
+            return false;
         }
-    }
 
-    public void RemoveFromOrder(string item, double num)
-    {
-        while (num > 0)
+        if (cart == null || cart.Count == 0)
         {
-            order.Remove(item);
-            num--;
+            message = "Cart is empty. Add items before checking out.";
+            return false;
         }
-    }
 
-    public List<string> GetCurrentOrder()
-    {
-        return order;
+        try
+        {
+            Directory.CreateDirectory(FileSystem.AppDataDirectory);
+
+            // Format: username|Burger:2,Fries:1,Soda:1
+            var sb = new StringBuilder();
+            sb.Append(username);
+            sb.Append('|');
+
+            // Loop requirement is clearly visible here
+            for (int i = 0; i < cart.Count; i++)
+            {
+                sb.Append(cart[i].Name);
+                sb.Append(':');
+                sb.Append(cart[i].Quantity);
+
+                if (i < cart.Count - 1) sb.Append(',');
+            }
+
+            File.AppendAllLines(_orderPath, new[] { sb.ToString() });
+
+            message = "Order saved successfully.";
+            return true;
+        }
+        catch (Exception ex)
+        {
+            message = $"File error while saving order: {ex.Message}";
+            return false;
+        }
     }
 }

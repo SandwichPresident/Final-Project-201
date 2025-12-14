@@ -1,12 +1,12 @@
 namespace FinalProject201;
 
-public class OrderServices
+public static class OrderServices
 {
-    private Dictionary<string, Item> order = new Dictionary<string, Item>();
+    public static Dictionary<string, Item> order = new Dictionary<string, Item>();
 
     //Add main stepper class here (make it public) if need to
 
-    public void AddToOrder(Item item)
+    public static void AddToOrder(Item item)
     {
         if (order.ContainsKey(item.Name))
         {
@@ -20,7 +20,7 @@ public class OrderServices
        
     }
 
-    public void RemoveFromOrder(Item item)
+    public static void RemoveFromOrder(Item item)
     {
         if (order.ContainsKey(item.Name))
         {
@@ -37,7 +37,7 @@ public class OrderServices
         }
     }
 
-    public Dictionary<string, Item> GetCurrentOrder()
+    public static Dictionary<string, Item> GetCurrentOrder()
     {
         return order;
     }

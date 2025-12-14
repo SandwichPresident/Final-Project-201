@@ -26,14 +26,17 @@
                 else if (stepper.Equals(veggieStep))
                 {
                     UpdateBtnTxt(veggieBtn, value);
+                    vegVal = value;
                 }
                 else if (stepper.Equals(appleStep))
                 {
                     UpdateBtnTxt(appleBtn, value);
+                    appleVal = value;
                 }
                 else if (stepper.Equals(fruitStep))
                 {
                     UpdateBtnTxt(fruitBtn, value);
+                    fruitVal = value;
                 }
             }
 
@@ -61,6 +64,37 @@
             {
                 Name = "Fries",
                 Quantity = (int)friesVal,
+                Price = 2.99
+            };
+        }
+
+        private void veggieBtn_Clicked(object sender, EventArgs e)
+        {
+            Item fries = new Item
+            {
+                Name = "Veggies",
+                Quantity = (int)vegVal,
+                Price = 2.99
+            };
+
+        }
+
+        private void appleBtn_Clicked(object sender, EventArgs e)
+        {
+            Item fries = new Item
+            {
+                Name = "Apple Sauce",
+                Quantity = (int)appleVal,
+                Price = 2.99
+            };
+        }
+
+        private void fruitBtn_Clicked(object sender, EventArgs e)
+        {
+            Item fries = new Item
+            {
+                Name = "Fruit Cup",
+                Quantity = (int)fruitVal,
                 Price = 2.99
             };
         }

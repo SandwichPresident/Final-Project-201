@@ -33,3 +33,13 @@ public class Item
         return $"{Name} x{Quantity}";
     }
 }
+// added child class of item for drinks, contains the amount of sugar in grams
+public class Drink : Item
+{
+    public int SugarGrams { get; set; }
+
+    public override string ToString()
+    {
+        return $"{Name} x{Quantity}";
+    }
+}

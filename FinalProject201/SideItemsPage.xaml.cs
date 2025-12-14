@@ -74,7 +74,7 @@
             {
                 Name = "Veggies",
                 Quantity = (int)vegVal,
-                Price = 2.99
+                Price = 1.99
             };
 
         }
@@ -85,7 +85,7 @@
             {
                 Name = "Apple Sauce",
                 Quantity = (int)appleVal,
-                Price = 2.99
+                Price = 0.99
             };
         }
 
@@ -95,7 +95,7 @@
             {
                 Name = "Fruit Cup",
                 Quantity = (int)fruitVal,
-                Price = 2.99
+                Price = 1.99
             };
         }
     }

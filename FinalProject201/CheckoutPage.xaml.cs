@@ -17,8 +17,8 @@ namespace FinalProject201
         {
             return new List<Item>
             {
-                new Item{ Name = "please work", Quantity = 2},
-                new Item{ Name = "i swear", Quantity=2}
+                new Item{ Name = "please work", Quantity = 2, Price=2},
+                new Item{ Name = "i swear", Quantity=2, Price=2.1}
             };
         }
         private async void CheckoutClicked(object? sender, EventArgs e)

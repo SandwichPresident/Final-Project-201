@@ -23,7 +23,6 @@ namespace FinalProject201
             double value = e.NewValue;
 
             // Ensure the event sender is a Stepper control
-
             if (sender is Stepper stepper)
             {
                 // Check which dessert stepper triggered the event

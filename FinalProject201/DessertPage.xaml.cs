@@ -55,7 +55,7 @@ namespace FinalProject201
         }
 
 
-// Navigates the user to the checkout page to review and place the order
+        // Navigates the user to the checkout page to review and place the order
         private async void CheckoutClicked(object? sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//CheckoutPage");
@@ -63,7 +63,7 @@ namespace FinalProject201
 
         private void icecreamBtn_Clicked(object sender, EventArgs e)
         {
-            Item fries = new Item
+            Item iceCream = new Item
             {
                 Name = "Ice Cream",
                 Quantity = (int)iceCVal,
@@ -73,7 +73,7 @@ namespace FinalProject201
 
         private void cookieBtn_Clicked(object sender, EventArgs e)
         {
-            Item fries = new Item
+            Item cookie = new Item
             {
                 Name = "Cookie",
                 Quantity = (int)cookieVal,

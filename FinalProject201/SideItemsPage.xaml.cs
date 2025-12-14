@@ -70,7 +70,7 @@
 
         private void veggieBtn_Clicked(object sender, EventArgs e)
         {
-            Item fries = new Item
+            Item veggies = new Item
             {
                 Name = "Veggies",
                 Quantity = (int)vegVal,
@@ -81,7 +81,7 @@
 
         private void appleBtn_Clicked(object sender, EventArgs e)
         {
-            Item fries = new Item
+            Item apple = new Item
             {
                 Name = "Apple Sauce",
                 Quantity = (int)appleVal,
@@ -91,7 +91,7 @@
 
         private void fruitBtn_Clicked(object sender, EventArgs e)
         {
-            Item fries = new Item
+            Item fruit = new Item
             {
                 Name = "Fruit Cup",
                 Quantity = (int)fruitVal,

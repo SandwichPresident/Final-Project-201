@@ -35,7 +35,7 @@
             SemanticProperties.Description="Ice Cream price"/>
                 <Stepper x:Name="icecreamStep" Minimum="0" Maximum="99" Increment="1"  
          Grid.Row="2" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End" />
-                <Button x:Name="icecreamBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <Button x:Name="icecreamBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Clicked="icecreamBtn_Clicked"/>
 
 
 
@@ -52,7 +52,7 @@
           SemanticProperties.Description="Cookie price"/>
                 <Stepper x:Name="cookieStep" Minimum="0" Maximum="99" Increment="1" 
          Grid.Row="2" Grid.RowSpan="2"  Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
-                <Button x:Name="cookieBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
+                <Button x:Name="cookieBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" Clicked="cookieBtn_Clicked"/>
 
             </Grid>
       

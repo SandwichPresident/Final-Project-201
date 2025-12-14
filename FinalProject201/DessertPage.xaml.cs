@@ -68,6 +68,7 @@ namespace FinalProject201
                 Quantity = (int)iceCVal,
                 Price = 4.99
             };
+            OrderServices.AddToOrder(iceCream);
         }
 
         private void cookieBtn_Clicked(object sender, EventArgs e)
@@ -78,6 +79,7 @@ namespace FinalProject201
                 Quantity = (int)cookieVal,
                 Price = 1.49
             };
+            OrderServices.AddToOrder(cookie);
         }
     }
 }

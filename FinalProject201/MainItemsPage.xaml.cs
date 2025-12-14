@@ -73,6 +73,7 @@ namespace FinalProject201
                 Quantity = (int)burgerVal,
                 Price = 3.99
             };
+            OrderServices.AddToOrder(burger);
         }
 
         private void pizzaBtn_Clicked(object sender, EventArgs e)
@@ -83,6 +84,7 @@ namespace FinalProject201
                 Quantity = (int)pizzaVal,
                 Price = 1.99
             };
+            OrderServices.AddToOrder(pizza);
         }
 
         private void saladBtn_Clicked(object sender, EventArgs e)
@@ -93,6 +95,7 @@ namespace FinalProject201
                 Quantity = (int)saladVal,
                 Price = 2.49
             };
+            OrderServices.AddToOrder(salad);
         }
     }
 }

@@ -81,6 +81,7 @@ namespace FinalProject201
                 Price = 0.99,
                 SugarGrams = 44
             };
+            OrderServices.AddToOrder(cola);
         }
 
         private void waterBtn_Clicked(object sender, EventArgs e)
@@ -92,6 +93,7 @@ namespace FinalProject201
                 Price = 0.00,
                 SugarGrams = 0
             };
+            OrderServices.AddToOrder(water);
         }
 
         private void coffeeBtn_Clicked(object sender, EventArgs e)
@@ -103,6 +105,7 @@ namespace FinalProject201
                 Price = 0.99,
                 SugarGrams = 0
             };
+            OrderServices.AddToOrder(coffee);
         }
 
         private void lemonBtn_Clicked(object sender, EventArgs e)
@@ -114,6 +117,7 @@ namespace FinalProject201
                 Price = 0.99,
                 SugarGrams = 25
             };
+            OrderServices.AddToOrder(lemonade);
         }
     }
 }

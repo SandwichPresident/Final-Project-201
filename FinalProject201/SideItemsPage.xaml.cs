@@ -66,6 +66,7 @@
                 Quantity = (int)friesVal,
                 Price = 2.99
             };
+            OrderServices.AddToOrder(fries);
         }
 
         private void veggieBtn_Clicked(object sender, EventArgs e)
@@ -76,7 +77,7 @@
                 Quantity = (int)vegVal,
                 Price = 1.99
             };
-
+            OrderServices.AddToOrder(veggies);
         }
 
         private void appleBtn_Clicked(object sender, EventArgs e)
@@ -87,6 +88,7 @@
                 Quantity = (int)appleVal,
                 Price = 0.99
             };
+            OrderServices.AddToOrder(apple);
         }
 
         private void fruitBtn_Clicked(object sender, EventArgs e)
@@ -97,6 +99,7 @@
                 Quantity = (int)fruitVal,
                 Price = 1.99
             };
+            OrderServices.AddToOrder(fruit);
         }
     }
 }

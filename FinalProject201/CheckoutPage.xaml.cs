@@ -7,33 +7,31 @@ namespace FinalProject201
     
     public partial class CheckoutPage : ContentPage
     {
-
-        OrderServices order;
-        public CheckoutPage(OrderServices ordering)
+        public CheckoutPage()
         {
 
          // Initializes UI components defined in CheckoutPage.xaml
          
             InitializeComponent();
+            /*
             order = ordering;
             order.AddToOrder(new Item { Name = "this is for testing", Quantity = 1, Price = 100 });
-
+            */
             // Sets the item source for the checkout list view
             // This determines which items are displayed to the user
             
-            orderedItems.ItemsSource = GetItems();
+            //orderedItems.ItemsSource = GetItems();
 
         }
 
         // Retrieves the list of items currently in the cart
         // This method demonstrates use of a List<Item> data structure
-        
-
+        /*
         private List<Item> GetItems()
         {
             return order.GetCurrentOrder().Values.ToList();
         }
-
+        */
         private void RemoveItem(object? sender, EventArgs e)
         {
             Console.WriteLine("removing item");

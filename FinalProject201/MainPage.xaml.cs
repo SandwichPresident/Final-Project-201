@@ -1,13 +1,27 @@
-﻿namespace FinalProject201
-{
+namespace FinalProject201
+{ 
+
+     // Main login page for the application.
+    // Handles user authentication and account creation.
+     
     public partial class MainPage : ContentPage
     {
+
+    // Dictionary used to store usernames and passwords
+        // Demonstrates use of a data structure for quick lookup
+        
         Dictionary<string, string> userLogins = new Dictionary<string, string>();
 
         public MainPage()
         {
+
+        // Initializes UI components defined in MainPage.xaml
             InitializeComponent();
 
+
+            // Reads stored login credentials from a text file
+            // Each line is expected to be in the format: "username, password"
+            
             StreamReader reader = new StreamReader("../../../../login.txt");
             while (!reader.EndOfStream)
             {
@@ -17,6 +31,9 @@
             reader.Close();
         }
 
+// Handles the login button click event
+        // Validates user input and navigates based on authentication results
+        
         private async void LoginClicked(object? sender, EventArgs e)
         {
             if (Username.Text == null || Password.Text == null)
@@ -44,6 +61,8 @@
                 }
                 else
                 {
+
+                // Successful login; navigate to the main items page
                     await Shell.Current.GoToAsync("//MainItemsPage");
                 }
             }

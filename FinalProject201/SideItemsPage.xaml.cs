@@ -57,7 +57,12 @@
 
         private void friesBtn_Clicked(object sender, EventArgs e)
         {
-            OrderServices.AddToOrder("Fries");
+            Item fries = new Item
+            {
+                Name = "Fries",
+                Quantity = (int)friesVal,
+                Price = 2.99
+            };
         }
     }
 }

@@ -9,9 +9,7 @@ namespace FinalProject201
     {
         public CheckoutPage()
         {
-
-         // Initializes UI components defined in CheckoutPage.xaml
-         
+            // Initializes UI components defined in CheckoutPage.xaml
             InitializeComponent();
             /*
             order = ordering;

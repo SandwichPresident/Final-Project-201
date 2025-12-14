@@ -35,7 +35,7 @@ namespace FinalProject201
                 } else if (stepper.Equals(waterStep))
                 {
 
-                / Update water button text
+                // Update water button text
                     UpdateBtnTxt(waterBtn, value);
                 } else if (stepper.Equals(coffeeStep))
                 {

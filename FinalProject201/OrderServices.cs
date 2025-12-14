@@ -1,6 +1,6 @@
 namespace FinalProject201;
 
-internal class OrderServices
+public class OrderServices
 {
     private Dictionary<string, Item> order = new Dictionary<string, Item>();
 

@@ -34,7 +34,7 @@
                 SemanticProperties.Description="Hamburger price"/>
                 <Stepper x:Name="burgerStep" Minimum="0" Maximum="99" Increment="1"  
              Grid.Row="2" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End" />
-                <Button x:Name="burgerBtn" Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <Button x:Name="burgerBtn" Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Clicked="AddToBasket"/>
 
 
 
@@ -51,7 +51,7 @@
               SemanticProperties.Description="Pizza price"/>
                 <Stepper x:Name="pizzaStep" Minimum="0" Maximum="99" Increment="1" 
              Grid.Row="2" Grid.RowSpan="2"  Grid.Column="6" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
-                <Button x:Name="pizzaBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2"/>
+                <Button x:Name="pizzaBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" Clicked="AddToBasket"/>
 
 
 
@@ -68,7 +68,7 @@
         SemanticProperties.Description="Salad price"/>
                 <Stepper x:Name="saladStep"  Minimum="0" Maximum="99" Increment="1" 
              Grid.Row="7" Grid.RowSpan="2"  Grid.Column="3" ValueChanged="StepperValChanged" HorizontalOptions="End"/>
-                <Button x:Name="saladBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="2"  Grid.ColumnSpan="2"/>
+                <Button x:Name="saladBtn"  Style="{StaticResource AddCartBtn}" Text="Add 0 to cart" Grid.Row="9" Grid.Column="2"  Grid.ColumnSpan="2" Clicked="AddToBasket"/>
 
 
             </Grid>

@@ -5,10 +5,12 @@ namespace FinalProject201
      
     public partial class MainItemsPage : ContentPage
     {
-        public MainItemsPage()
+        OrderServices order;
+        public MainItemsPage(OrderServices ordering)
         {
         // Initializes UI components defined in MainItemsPage.xaml
             InitializeComponent();
+            order = ordering;
         }
 
 
@@ -54,8 +56,13 @@ namespace FinalProject201
         }
 
 
+        private void AddToBasket(object? sender, EventArgs e)
+        {
+            order.AddToOrder(new Item { Name = "Burger", Quantity = 1, Price = 7.99 });
+        }
+
 // Navigates the user to the checkout page
-        // where they can review and place their order
+// where they can review and place their order
 
         private async void CheckoutClicked(object? sender, EventArgs e)
         {

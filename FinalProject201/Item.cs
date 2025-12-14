@@ -6,7 +6,7 @@ namespace FinalProject201;
 // 1) The menu lists
 // 2) The cart list
 
-internal class Item
+public class Item
 {
     // Name of the food item (ex: Burger, Fries, Soda)
     public string Name { get; set; }
@@ -20,12 +20,12 @@ internal class Item
     public double Price { get; set; }
 
     // Constructor for basic item usage
-    public Item(string name, int quantity = 1, double price = 0m)
-    {
-        Name = name;
-        Quantity = quantity;
-        Price = price;
-    }
+    //public Item(string name, int quantity = 1, double price = 0m)
+    //{
+    //    Name = name;
+    //    Quantity = quantity;
+    //    Price = price;
+    //}
 
     // Helpful for debugging, logging, and file saving
     public override string ToString()

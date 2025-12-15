@@ -1,4 +1,7 @@
 
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
 namespace FinalProject201;
 
 // Represents a single menu item in the application.
@@ -8,6 +11,9 @@ namespace FinalProject201;
 
 public class Item
 {
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
     // Name of the food item (ex: Burger, Fries, Soda)
     public string Name { get; set; }
 

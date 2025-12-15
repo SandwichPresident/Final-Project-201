@@ -25,9 +25,9 @@ namespace FinalProject201
 
         // Retrieves the list of items currently in the cart
         // This method demonstrates use of a List<Item> data structure
-        private List<Item> GetItems()
+        private ObservableCollection<Item> GetItems()
         {
-            return OrderServices.GetCurrentOrder().Values.ToList();
+            return OrderServices.GetCurrentOrder();
         }
 
         //gets total cost of everything currently in the order

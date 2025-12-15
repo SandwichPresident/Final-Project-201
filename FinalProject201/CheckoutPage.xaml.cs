@@ -35,7 +35,20 @@ namespace FinalProject201
         {
             return OrderServices.GetTotalPrice();
         }
-      
+
+        // Logs the user out and navigates back to the login page
+        private async void LogoutClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//MainPage");
+        }
+
+        // Navigates the user to the checkout page
+        // where they can review and place their order
+        private async void MenuClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//MainItemsPage");
+        }
+
 
         // Handles the checkout button click event
         // Displays a confirmation message and returns the user to the login page

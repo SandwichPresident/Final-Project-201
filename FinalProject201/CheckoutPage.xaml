@@ -7,7 +7,17 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-           
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton MinimumHeightRequest="30" HeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="0" Source="logout.png" Clicked="LogoutClicked" HorizontalOptions="Start"/>
+                <ImageButton MinimumHeightRequest="30" HeightRequest="30" Margin="10" Grid.Row="0" Grid.Column="1" Source="menu.png" Clicked="MenuClicked" HorizontalOptions="End"/>
+            </Grid>
+
             <Label
                 Text="Checkout"
                 Style="{StaticResource Headline}"

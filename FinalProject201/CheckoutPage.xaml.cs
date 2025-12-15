@@ -24,12 +24,16 @@ namespace FinalProject201
 
         // Retrieves the list of items currently in the cart
         // This method demonstrates use of a List<Item> data structure
-        /*
+        public static GetItems()
+        {
+
+        }
+
         private List<Item> GetItems()
         {
             return order.GetCurrentOrder().Values.ToList();
         }
-        */
+        
         private void RemoveItem(object? sender, EventArgs e)
         {
             Console.WriteLine("removing item");

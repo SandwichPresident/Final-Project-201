@@ -66,7 +66,7 @@ namespace FinalProject201
             {
                 Name = "Ice Cream",
                 Quantity = (int)iceCVal,
-                Price = 4.99
+                Price = 3.99
             };
             OrderServices.AddToOrder(iceCream);
         }

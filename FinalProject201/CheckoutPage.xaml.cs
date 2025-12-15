@@ -18,32 +18,31 @@ namespace FinalProject201
             // Sets the item source for the checkout list view
             // This determines which items are displayed to the user
             
-            //orderedItems.ItemsSource = GetItems();
+            orderedItems.ItemsSource = GetItems();
+            totalCost.Text = "$" + GetTotalCost().ToString();
 
         }
 
         // Retrieves the list of items currently in the cart
         // This method demonstrates use of a List<Item> data structure
-        public static GetItems()
-        {
-
-        }
-
         private List<Item> GetItems()
         {
-            return order.GetCurrentOrder().Values.ToList();
+            return OrderServices.GetCurrentOrder().Values.ToList();
         }
-        
-        private void RemoveItem(object? sender, EventArgs e)
+
+        //gets total cost of everything currently in the order
+        private double GetTotalCost()
         {
-            Console.WriteLine("removing item");
+            return OrderServices.GetTotalPrice();
         }
+      
 
         // Handles the checkout button click event
         // Displays a confirmation message and returns the user to the login page
-        
+
         private async void CheckoutClicked(object? sender, EventArgs e)
         {
+            OrderServices.Checkout();
             await DisplayAlert("Order placed!", "Thank you for choosing Ritchies!", "Exit");
 
             // Navigates back to the main login page after checkout

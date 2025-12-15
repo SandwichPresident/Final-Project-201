@@ -74,6 +74,7 @@ namespace FinalProject201
                 Price = 3.99
             };
             OrderServices.AddToOrder(burger);
+
         }
 
         private void pizzaBtn_Clicked(object sender, EventArgs e)

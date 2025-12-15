@@ -20,21 +20,19 @@ public static class OrderServices
        
     }
 
-    public static void RemoveFromOrder(Item item)
+    public static double GetTotalPrice()
     {
-        if (order.ContainsKey(item.Name))
+        double total = 0;
+        foreach (KeyValuePair<string, Item> pair in order)
         {
-            item.Quantity -= order[item.Name].Quantity;
-            if (item.Quantity <= 0)
-            {
-                order.Remove(item.Name);
-            }
-            else
-            {
-                order[item.Name] = item;
-            }
-            
+            total += pair.Value.Price;
         }
+        return total;
+    }
+
+    public static void Checkout()
+    {
+        order = new Dictionary<string, Item>();
     }
 
     public static Dictionary<string, Item> GetCurrentOrder()
